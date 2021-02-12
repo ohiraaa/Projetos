@@ -1,0 +1,416 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-12T22:29:35.044Z",
+        "line": 12,
+        "name": "Deve ser possivel procurar pessoa pelo DDD e telefone",
+        "description": "",
+        "id": "validacao-de-cadastro-de-pessoas;deve-ser-possivel-procurar-pessoa-pelo-ddd-e-telefone;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 733574376,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "que acesso a api de pessoa",
+            "match": {
+              "location": "ValidaPessoas.que_acessei_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2317024953,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "buscar pessoa por 11 985388877",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 18
+                },
+                {
+                  "val": "985388877",
+                  "offset": 21
+                }
+              ],
+              "location": "ValidaPessoas.cadastrar_dados_nova_pessoa(Integer,Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 70477880,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "validarei o 200 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.statusCode_de_retorno(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Teste1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-12T22:29:38.277Z",
+        "line": 22,
+        "name": "Deve retornar erro quando buscar pessoa por telefone inexistente",
+        "description": "",
+        "id": "validacao-de-cadastro-de-pessoas;deve-retornar-erro-quando-buscar-pessoa-por-telefone-inexistente;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 653425,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "que acesso a api de pessoa",
+            "match": {
+              "location": "ValidaPessoas.que_acessei_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 38832988,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "buscar pessoa por 11 985399999",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 18
+                },
+                {
+                  "val": "985399999",
+                  "offset": 21
+                }
+              ],
+              "location": "ValidaPessoas.cadastrar_dados_nova_pessoa(Integer,Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3335115,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "validarei o 404 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.statusCode_de_retorno(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Teste2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-12T22:29:38.328Z",
+        "line": 32,
+        "name": "Deve salvar nova pessoa no sistema",
+        "description": "",
+        "id": "validacao-de-cadastro-de-pessoas;deve-salvar-nova-pessoa-no-sistema;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 767603,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "que acesso a api de pessoa",
+            "match": {
+              "location": "ValidaPessoas.que_acessei_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157658278,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "cadastrar Rommel_NovoCadastro.json da nova pessoa",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rommel_NovoCadastro.json",
+                  "offset": 10
+                }
+              ],
+              "location": "ValidaPessoas.cadastrar_dados_nova_pessoa(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1777673,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "validarei o 201 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.statusCode_de_retorno(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Teste3"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-12T22:29:38.500Z",
+        "line": 43,
+        "name": "Nao deve ser possivel salvar duas pessoas com o mesmo CPF",
+        "description": "",
+        "id": "validacao-de-cadastro-de-pessoas;nao-deve-ser-possivel-salvar-duas-pessoas-com-o-mesmo-cpf;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 825760,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "que acesso a api de pessoa",
+            "match": {
+              "location": "ValidaPessoas.que_acessei_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 38273643,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "cadastrar Rommel_IgualCPF_DiferenteTelefone.json da nova pessoa",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rommel_IgualCPF_DiferenteTelefone.json",
+                  "offset": 10
+                }
+              ],
+              "location": "ValidaPessoas.cadastrar_dados_nova_pessoa(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1613058650,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "validarei a Já existe pessoa cadastrada com o CPF 16422244444 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Já existe pessoa cadastrada com o CPF 16422244444",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.mensagem_de_retorno(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2577348,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "validarei o 400 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.statusCode_de_retorno(Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Teste4"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-12T22:29:40.164Z",
+        "line": 54,
+        "name": "Nao deve ser possivel salvar duas pessoas com o mesmo telefone",
+        "description": "",
+        "id": "validacao-de-cadastro-de-pessoas;nao-deve-ser-possivel-salvar-duas-pessoas-com-o-mesmo-telefone;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 824905,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "que acesso a api de pessoa",
+            "match": {
+              "location": "ValidaPessoas.que_acessei_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 62915179,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "cadastrar Rommel_DiferenteCPF_IgualTelefone.json da nova pessoa",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rommel_DiferenteCPF_IgualTelefone.json",
+                  "offset": 10
+                }
+              ],
+              "location": "ValidaPessoas.cadastrar_dados_nova_pessoa(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29209092,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "validarei a Já existe pessoa cadastrada com o Telefone (11)942224444 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Já existe pessoa cadastrada com o Telefone (11)942224444",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.mensagem_de_retorno(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9153499,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "validarei o 400 de retorno da api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 12
+                }
+              ],
+              "location": "ValidaPessoas.statusCode_de_retorno(Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Teste5"
+          }
+        ]
+      }
+    ],
+    "name": "Validacao de Cadastro de Pessoas",
+    "description": "",
+    "id": "validacao-de-cadastro-de-pessoas",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Pessoas.feature",
+    "tags": [
+      {
+        "name": "@All",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
