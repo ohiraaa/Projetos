@@ -15,13 +15,10 @@ import io.cucumber.junit.Cucumber;
 				 "pretty",
 				  "html:target/cucumber-html-report",
 				  "json:target/cucumber-reports/cucumber.json",
-				  "junit:target/cucumber-reports/cucumber.xml",				 
-				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"				 
+				  "junit:target/cucumber-reports/cucumber.xml"			     
 		 },
 		tags = {"@All" }
 		)
 public class TestRunner {
-	
-
-}
+	}
 

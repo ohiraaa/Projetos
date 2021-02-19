@@ -1,7 +1,7 @@
 {
     "codigo": 5,
     "nome": "Rommel Von",
-    "cpf": "88822244444",
+    "cpf": "12335678909",
     "enderecos": [
         {
             "codigo": 5,
@@ -17,7 +17,7 @@
         {
             "codigo": 5,
             "ddd": "11",
-            "numero": "942224444"
+            "numero": "985388877"
         }
     ]
 }

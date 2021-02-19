@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="5.233049">
-<testcase classname="Validacao de Cadastro de Pessoas" name="Deve ser possivel procurar pessoa pelo DDD e telefone" time="3.229574">
-<system-out><![CDATA[Given que acesso a api de pessoa............................................passed
-When buscar pessoa por 11 985388877.........................................passed
-Then validarei o 200 de retorno da api......................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="4.753673">
+<testcase classname="Validacao de Cadastro de Pessoas" name="Deve ser possivel procurar pessoa pelo DDD e telefone" time="3.295337">
+<system-out><![CDATA[Dado que acesso a api de pessoa.............................................passed
+Quando buscar pessoa por 11 985388877.......................................passed
+Entao validarei o statuscode 200 de retorno da api..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validacao de Cadastro de Pessoas" name="Deve retornar erro quando buscar pessoa por telefone inexistente" time="0.050466">
-<system-out><![CDATA[Given que acesso a api de pessoa............................................passed
-When buscar pessoa por 11 985399999.........................................passed
-Then validarei o 404 de retorno da api......................................passed
+<testcase classname="Validacao de Cadastro de Pessoas" name="Deve retornar erro quando buscar pessoa por telefone inexistente" time="0.057976">
+<system-out><![CDATA[Dado que acesso a api de pessoa.............................................passed
+Quando buscar pessoa por 11 985399999.......................................passed
+Entao validarei o statuscode 404 de retorno da api..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validacao de Cadastro de Pessoas" name="Deve salvar nova pessoa no sistema" time="0.170077">
-<system-out><![CDATA[Given que acesso a api de pessoa............................................passed
-When cadastrar Rommel_NovoCadastro.json da nova pessoa......................passed
-Then validarei o 201 de retorno da api......................................passed
+<testcase classname="Validacao de Cadastro de Pessoas" name="Deve salvar nova pessoa no sistema" time="0.168759">
+<system-out><![CDATA[Dado que acesso a api de pessoa.............................................passed
+Quando cadastrar Rommel_NovoCadastro.json da nova pessoa....................passed
+Entao validarei o statuscode 201 de retorno da api..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validacao de Cadastro de Pessoas" name="Nao deve ser possivel salvar duas pessoas com o mesmo CPF" time="1.662863">
-<system-out><![CDATA[Given que acesso a api de pessoa............................................passed
-When cadastrar Rommel_IgualCPF_DiferenteTelefone.json da nova pessoa........passed
-Then validarei a Já existe pessoa cadastrada com o CPF 16422244444 de retorno da api.passed
-And validarei o 400 de retorno da api.......................................passed
+<testcase classname="Validacao de Cadastro de Pessoas" name="Nao deve ser possivel salvar duas pessoas com o mesmo CPF" time="1.13262">
+<system-out><![CDATA[Dado que acesso a api de pessoa.............................................passed
+Quando cadastrar Rommel_IgualCPF_DiferenteTelefone.json da nova pessoa......passed
+Entao validarei a mensagem Já existe pessoa cadastrada com o CPF 16422244444 de retorno da api.passed
+E validarei o statuscode 400 de retorno da api..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Validacao de Cadastro de Pessoas" name="Nao deve ser possivel salvar duas pessoas com o mesmo telefone" time="0.120069">
-<system-out><![CDATA[Given que acesso a api de pessoa............................................passed
-When cadastrar Rommel_DiferenteCPF_IgualTelefone.json da nova pessoa........passed
-Then validarei a Já existe pessoa cadastrada com o Telefone (11)942224444 de retorno da api.passed
-And validarei o 400 de retorno da api.......................................passed
+<testcase classname="Validacao de Cadastro de Pessoas" name="Nao deve ser possivel salvar duas pessoas com o mesmo telefone" time="0.098981">
+<system-out><![CDATA[Dado que acesso a api de pessoa.............................................passed
+Quando cadastrar Rommel_DiferenteCPF_IgualTelefone.json da nova pessoa......passed
+Entao validarei a mensagem Já existe pessoa cadastrada com o Telefone (11)985388877 de retorno da api.passed
+E validarei o statuscode 400 de retorno da api..............................passed
 ]]></system-out>
 </testcase>
 </testsuite>
